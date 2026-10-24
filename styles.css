@@ -10,7 +10,7 @@
   --highlight-light: #faeaec;
   --serif: "Literata", Georgia, serif;
   --sans: "IBM Plex Sans", sans-serif;
-  --width: 940px;
+  --width: 1040px;
 }
 
 * {
@@ -28,7 +28,7 @@ body {
     radial-gradient(circle at 12% 8%, rgba(228, 239, 242, 0.42), transparent 24rem),
     var(--background);
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.68;
   -webkit-font-smoothing: antialiased;
 }
@@ -184,7 +184,7 @@ nav a:focus-visible::after {
   gap: 0.45rem;
   width: fit-content;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   text-decoration: none;
   transition: color 180ms ease, transform 180ms ease;
 }
@@ -201,7 +201,7 @@ nav a:focus-visible::after {
 }
 
 .profile-links .email-link {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   white-space: nowrap;
 }
 
@@ -273,7 +273,7 @@ h1 {
   display: block;
   margin-bottom: 0.15rem;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -282,14 +282,14 @@ h1 {
 .research-interests p {
   margin: 0;
   color: #28454e;
-  font-size: 0.88rem;
+  font-size: 0.94rem;
   font-weight: 500;
 }
 
 .scholar-stats {
   margin: 1rem 0 0;
   color: var(--muted);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
 }
 
 .scholar-stats strong {
@@ -318,7 +318,7 @@ h1 {
 .section-title > p {
   margin: 0.5rem 0 0;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.74rem;
 }
 
 .news-list {
@@ -404,14 +404,14 @@ h1 {
 
 .pub-venue strong {
   color: var(--accent);
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   letter-spacing: 0.03em;
 }
 
 .pub-venue span {
   margin-top: 0.05rem;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   line-height: 1.35;
 }
 
@@ -442,7 +442,7 @@ h1 {
 .authors {
   margin: 0.35rem 0 0;
   color: #4d575b;
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   line-height: 1.5;
 }
 
@@ -456,7 +456,7 @@ h1 {
   color: #3f6872;
   max-width: none;
   min-height: 2.9em;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   line-height: 1.45;
   hyphens: auto;
   hyphenate-character: "-";
@@ -472,7 +472,7 @@ h1 {
   gap: 0.25rem;
   margin: 0.4rem 0 0;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   vertical-align: middle;
 }
 
@@ -529,7 +529,7 @@ h1 {
 .paper-link {
   display: inline-block;
   margin: 0.4rem 0 0 0.65rem;
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   font-weight: 500;
 }
 
@@ -548,7 +548,7 @@ h1 {
 .all-publications {
   margin: 1.4rem 0 0;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .recent-research-list {
@@ -641,20 +641,20 @@ h1 {
 .internship-list .internship-role {
   margin-top: 0.18rem;
   color: #3f494c;
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   font-weight: 500;
 }
 
 .internship-list .internship-location {
   margin-top: 0.1rem;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 0.8rem;
 }
 
 .internship-list .internship-program {
   margin-top: 0.12rem;
   color: #5f6e72;
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
@@ -698,7 +698,7 @@ h1 {
 .timeline time {
   margin-bottom: 0.15rem;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -710,7 +710,7 @@ h1 {
 
 .timeline span {
   margin-top: 0.1rem;
-  font-size: 0.74rem;
+  font-size: 0.8rem;
 }
 
 .timeline .institution-row {
@@ -831,7 +831,7 @@ h1 {
 .timeline small {
   margin-top: 0.15rem;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
 }
 
 .supervisor-link {
@@ -855,7 +855,7 @@ h1 {
   gap: 1rem;
   padding-block: 1.75rem 2.5rem;
   color: var(--muted);
-  font-size: 0.66rem;
+  font-size: 0.72rem;
 }
 
 .footer-inner p {

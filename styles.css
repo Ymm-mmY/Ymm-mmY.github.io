@@ -173,6 +173,26 @@ nav a.is-active::after {
   transform-origin: left;
 }
 
+.language-toggle {
+  padding: 0.18rem 0.48rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  line-height: 1.2;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  border-color: var(--accent);
+  color: #fff;
+  background: var(--accent);
+}
+
 .container {
   padding-block: 4.25rem 5rem;
 }

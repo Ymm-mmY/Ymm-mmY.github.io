@@ -84,6 +84,25 @@ a:focus-visible {
   backdrop-filter: blur(10px);
 }
 
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  height: 3px;
+  pointer-events: none;
+}
+
+.scroll-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--highlight);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
 .header-inner,
 .container,
 .footer-inner {
@@ -139,6 +158,15 @@ nav a:hover {
 
 nav a:hover::after,
 nav a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+nav a.is-active {
+  color: var(--accent);
+}
+
+nav a.is-active::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -287,9 +315,45 @@ h1 {
 }
 
 .scholar-stats {
-  margin: 1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.55rem;
+  margin: 1.25rem 0 0;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.78rem;
+}
+
+.scholar-stat {
+  display: grid;
+  min-width: 6.2rem;
+  padding: 0.55rem 0.75rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: rgba(243, 238, 225, 0.72);
+}
+
+.scholar-stat strong {
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.scholar-stat span {
+  margin-top: 0.18rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.stats-source {
+  align-self: center;
+  margin-left: 0.2rem;
+  color: var(--muted);
+  font-size: 0.72rem;
 }
 
 .scholar-stats strong {
@@ -357,6 +421,8 @@ h1 {
   padding-block: 1.5rem;
   border-bottom: 1px solid var(--line);
   transition: background 240ms ease, transform 240ms ease, border-color 240ms ease;
+  content-visibility: auto;
+  contain-intrinsic-size: 240px;
 }
 
 .publication:hover,
@@ -584,6 +650,8 @@ h1 {
   align-items: start;
   padding-block: 1.5rem;
   border-bottom: 1px solid var(--line);
+  content-visibility: auto;
+  contain-intrinsic-size: 240px;
 }
 
 .recent-research .research-item:last-child {
@@ -919,6 +987,36 @@ h1 {
   }
 }
 
+.js .reveal-target {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 650ms cubic-bezier(0.22, 1, 0.36, 1), transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js .reveal-target.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.js .profile,
+.js .content-section,
+.js .publication,
+.js .research-item {
+  animation: none !important;
+}
+
+.js .publication:nth-child(2),
+.js .research-item:nth-child(2) { transition-delay: 80ms; }
+.js .publication:nth-child(3) { transition-delay: 140ms; }
+.js .publication:nth-child(4) { transition-delay: 200ms; }
+.js .publication:nth-child(5) { transition-delay: 260ms; }
+.js .publication:nth-child(6) { transition-delay: 320ms; }
+.js .publication:nth-child(7) { transition-delay: 380ms; }
+.js .publication:nth-child(8) { transition-delay: 440ms; }
+.js .publication:nth-child(9) { transition-delay: 500ms; }
+.js .publication:nth-child(10) { transition-delay: 560ms; }
+.js .publication:nth-child(11) { transition-delay: 620ms; }
+
 @media (prefers-reduced-motion: no-preference) {
   .profile {
     animation: reveal-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -954,6 +1052,36 @@ h1 {
   .publication:nth-child(9) { animation-delay: 500ms; }
   .publication:nth-child(10) { animation-delay: 560ms; }
   .publication:nth-child(11) { animation-delay: 620ms; }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .header-inner,
+  .container,
+  .footer-inner {
+    width: min(calc(100% - 3rem), var(--width));
+  }
+
+  nav {
+    gap: 1.1rem;
+  }
+
+  .profile {
+    gap: 2.25rem;
+  }
+
+  .content-section {
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .publication,
+  .research-item {
+    grid-template-columns: 165px 66px minmax(0, 1fr);
+  }
+
+  .paper-figure {
+    width: 165px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1006,6 +1134,17 @@ h1 {
   .profile-copy > p:not(.scholar-stats),
   .scholar-stats {
     grid-column: auto;
+  }
+
+  .scholar-stat {
+    min-width: 0;
+    flex: 1 1 0;
+    padding-inline: 0.55rem;
+  }
+
+  .stats-source {
+    flex-basis: 100%;
+    margin-left: 0;
   }
 
   .content-section {

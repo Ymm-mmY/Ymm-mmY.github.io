@@ -149,7 +149,7 @@ nav a:focus-visible::after {
 
 .profile {
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: 3.25rem;
   align-items: start;
   padding-bottom: 4rem;
@@ -157,8 +157,8 @@ nav a:focus-visible::after {
 
 .portrait-column img {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border: 1px solid var(--line);
   object-fit: cover;
   object-position: center center;
@@ -351,7 +351,7 @@ h1 {
 
 .publication {
   display: grid;
-  grid-template-columns: 170px 74px minmax(0, 1fr);
+  grid-template-columns: 185px 74px minmax(0, 1fr);
   gap: 1.1rem;
   align-items: start;
   padding-block: 1.5rem;
@@ -377,7 +377,7 @@ h1 {
 }
 
 .paper-figure {
-  width: 170px;
+  width: 185px;
   margin: 0;
   overflow: hidden;
   border-radius: 2px;
@@ -543,7 +543,7 @@ h1 {
 
 .research-item {
   display: grid;
-  grid-template-columns: 170px 74px minmax(0, 1fr);
+  grid-template-columns: 185px 74px minmax(0, 1fr);
   gap: 1.1rem;
   align-items: start;
   padding-block: 1.5rem;
@@ -945,8 +945,8 @@ h1 {
   }
 
   .portrait-column img {
-    width: 90px;
-    height: 90px;
+    width: 96px;
+    height: 96px;
   }
 
   .profile-links {
@@ -1055,13 +1055,13 @@ h1 {
   .paper-figure {
     grid-column: 1;
     grid-row: 1 / span 2;
-    width: 102px;
+    width: 112px;
   }
 
   .research-item .paper-placeholder {
     grid-column: 1;
     grid-row: 1 / span 2;
-    width: 102px;
+    width: 112px;
   }
 
   .pub-venue {

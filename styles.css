@@ -115,7 +115,7 @@ nav {
 nav a {
   position: relative;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 500;
   text-decoration: none;
 }
@@ -184,7 +184,7 @@ nav a:focus-visible::after {
   gap: 0.45rem;
   width: fit-content;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   text-decoration: none;
   transition: color 180ms ease, transform 180ms ease;
 }
@@ -201,7 +201,7 @@ nav a:focus-visible::after {
 }
 
 .profile-links .email-link {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   white-space: nowrap;
 }
 
@@ -273,7 +273,7 @@ h1 {
   display: block;
   margin-bottom: 0.15rem;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -289,7 +289,7 @@ h1 {
 .scholar-stats {
   margin: 1rem 0 0;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
 }
 
 .scholar-stats strong {
@@ -318,7 +318,7 @@ h1 {
 .section-title > p {
   margin: 0.5rem 0 0;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 0.8rem;
 }
 
 .news-list {
@@ -411,7 +411,7 @@ h1 {
 .pub-venue span {
   margin-top: 0.05rem;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.76rem;
   line-height: 1.35;
 }
 
@@ -442,7 +442,7 @@ h1 {
 .authors {
   margin: 0.35rem 0 0;
   color: #4d575b;
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   line-height: 1.5;
 }
 
@@ -472,7 +472,7 @@ h1 {
   gap: 0.25rem;
   margin: 0.4rem 0 0;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   vertical-align: middle;
 }
 
@@ -529,7 +529,7 @@ h1 {
 .paper-link {
   display: inline-block;
   margin: 0.4rem 0 0 0.65rem;
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   font-weight: 500;
 }
 
@@ -617,7 +617,7 @@ h1 {
 .research-summary {
   margin: 0.45rem 0 0;
   color: #5a666a;
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   line-height: 1.5;
 }
 
@@ -648,19 +648,19 @@ h1 {
 .internship-list .internship-location {
   margin-top: 0.1rem;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.84rem;
 }
 
 .internship-list .internship-program {
   margin-top: 0.12rem;
   color: #5f6e72;
-  font-size: 0.8rem;
+  font-size: 0.84rem;
   font-weight: 500;
 }
 
 .internship-list .timeline small {
   margin-top: 0.3rem;
-  font-size: 0.7rem;
+  font-size: 0.76rem;
 }
 
 .timeline {
@@ -698,7 +698,7 @@ h1 {
 .timeline time {
   margin-bottom: 0.15rem;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -710,7 +710,7 @@ h1 {
 
 .timeline span {
   margin-top: 0.1rem;
-  font-size: 0.8rem;
+  font-size: 0.84rem;
 }
 
 .timeline .institution-row {
@@ -831,7 +831,7 @@ h1 {
 .timeline small {
   margin-top: 0.15rem;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.76rem;
 }
 
 .supervisor-link {
@@ -855,7 +855,7 @@ h1 {
   gap: 1rem;
   padding-block: 1.75rem 2.5rem;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
 }
 
 .footer-inner p {
@@ -982,7 +982,7 @@ h1 {
   }
 
   .profile-links a {
-    font-size: 0.67rem;
+    font-size: 0.74rem;
   }
 
   .profile-copy h1 {
@@ -1024,7 +1024,7 @@ h1 {
 
 @media (max-width: 520px) {
   body {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .header-inner,
@@ -1034,7 +1034,7 @@ h1 {
   }
 
   nav a {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
   }
 
   .profile {

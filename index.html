@@ -31,6 +31,7 @@
           <a href="#recent-research">Research</a>
           <a href="#publications">Publication</a>
           <a href="assets/Miao-Yu-CV.pdf" target="_blank" rel="noreferrer">CV</a>
+          <button class="language-toggle" type="button" aria-pressed="false" aria-label="Switch to Chinese">中</button>
         </nav>
       </div>
     </header>
@@ -435,6 +436,83 @@
         updateProgress();
         window.addEventListener("scroll", updateProgress, { passive: true });
         window.addEventListener("resize", updateProgress);
+
+        window.addEventListener("DOMContentLoaded", () => {
+          const toggle = document.querySelector(".language-toggle");
+          const entries = [];
+          const add = (selector, en, zh, mode = "text", index = 0) => entries.push({ selector, en, zh, mode, index });
+          const addAll = (selector, values, mode = "text") => values.forEach(([en, zh], index) => add(selector, en, zh, mode, index));
+
+          add('nav a[href="#about"]', "About", "关于");
+          add('nav a[href="#education"]', "Education", "教育");
+          add('nav a[href="#internships"]', "Internship", "实习");
+          add('nav a[href="#recent-research"]', "Research", "近期研究");
+          add('nav a[href="#publications"]', "Publication", "论文");
+          add("#profile-name", "About me", "关于我");
+          add("#about .profile-copy > p:nth-of-type(1)", "", `目前，我是香港大学（HKU）计算机科学专业的一年级博士生，导师是 Prof. <a class="supervisor-link" href="https://scholar.google.com/citations?hl=en&user=Z7FOfV0AAAAJ" target="_blank" rel="noreferrer">Zuming Jiang</a>。此前，我获得了中国科学技术大学（USTC）计算机科学学士学位。`, "html");
+          add("#about .bio-summary", "", `我的研究聚焦于可信、可控的 AI 系统，尤其关注<strong>语言模型的安全性与可解释性</strong>、<strong>LLM 后训练</strong>和<strong>多智能体系统</strong>。我的工作已被<strong>ICML、ACL、AAAI、KDD、NeurIPS 和 ICLR</strong>等国际 AI 会议接收，并已获得<strong>1,000+ 次引用</strong>。`, "html");
+          add(".research-interests span", "Research interests", "研究方向");
+          add(".research-interests p", "Trustworthy AI · LLM Post-training · Autonomous Agents", "可信 AI · LLM 后训练 · 自主智能体");
+          addAll(".scholar-stat span", [["Citations", "引用"], ["h-index", "h-index"], ["i10-index", "i10-index"]]);
+          add(".stats-source", "Google Scholar · Oct. 2026", "Google Scholar · 2026年10月");
+
+          add("#education-heading span", "Education", "教育");
+          addAll("#education .education-list li > strong", [["Ph.D. in Computer Science", "计算机科学博士"], ["B.E. in Computer Science", "计算机科学学士"]]);
+          addAll("#education .institution-row > span", [["The University of Hong Kong (HKU)", "香港大学（HKU）"], ["University of Science and Technology of China (USTC)", "中国科学技术大学（USTC）"]]);
+          add("#education .education-list li:first-child > small", "", `导师：<a class="supervisor-link" href="https://scholar.google.com/citations?hl=en&user=Z7FOfV0AAAAJ" target="_blank" rel="noreferrer">Zuming Jiang</a>`, "html");
+
+          add("#internships-heading span", "Internship", "实习");
+          addAll("#internships .internship-details > strong", [["Tencent", "腾讯"], ["Shanghai Artificial Intelligence Laboratory", "上海人工智能实验室"], ["Agency for Science, Technology and Research (A*STAR)", "新加坡科技研究局（A*STAR）"], ["University of Science and Technology of China (USTC)", "中国科学技术大学（USTC）"]]);
+          addAll("#internships .internship-role", [["LLM Engineer (Qingyun Plan / 青云计划)", "大语言模型工程师（青云计划）"], ["Research Assistant", "研究助理"], ["Research Assistant", "研究助理"], ["Lab Assistant", "实验室助理"]]);
+          addAll("#internships .internship-location", [["Shenzhen, China", "中国深圳"], ["Shanghai, China", "中国上海"], ["Singapore", "新加坡"], ["Hefei, China", "中国合肥"]]);
+          addAll("#internships .internship-details > small", [["Supervisor: Shengyuan Chen", "导师：Shengyuan Chen"], ["Supervisors: Yafu Li & Yu Cheng", "导师：Yafu Li & Yu Cheng"], ["Supervisors: Xingrui Yu & Qing Guo", "导师：Xingrui Yu & Qing Guo"], ["Supervisor: Yan Song", "导师：Yan Song"]]);
+
+          add("#recent-research-heading span", "Recent Research", "近期研究");
+          addAll("#recent-research .pub-distinction", [["Preprint", "预印本"], ["Preprint", "预印本"]]);
+          addAll("#recent-research .paper-summary", [["Tracks how refusal circuits emerge and evolve during alignment, then confines safety updates to those circuits to improve robustness, reduce over-refusal, and preserve general capabilities.", "追踪拒答电路在对齐过程中的形成与演化，并将安全更新限制在这些电路中，以提升稳健性、减少过度拒答，同时保留通用能力。"], ["Uses reinforcement learning to identify sparse circuits behind reasoning and medical QA failures, then repairs only those components while preserving the model’s broader abilities.", "利用强化学习定位推理与医学问答失败背后的稀疏电路，并仅修复相关组件以保留模型的整体能力。"]]);
+          addAll("#recent-research .paper-link", [["Paper", "论文"], ["Paper", "论文"]]);
+
+          add("#publications-heading span", "Publication", "论文");
+          addAll("#publications .pub-distinction", [["Tutorial", "教程"], ["Findings", "Findings"], ["Oral", "口头报告"], ["Spotlight", "亮点论文"], ["Spotlight", "亮点论文"]]);
+          addAll("#publications .paper-summary", [["Introduces a universal method to attribute safety behavior to model circuits, enabling consistent diagnosis and targeted analysis across different language models.", "提出通用的安全行为电路归因方法，实现跨语言模型的一致诊断与针对性分析。"], ["Uncovers hidden backdoor triggers and traces their effects to responsible circuits, providing an interpretable route to diagnose and control backdoor behavior.", "揭示隐藏的后门触发器并追踪其负责电路，为后门行为的可解释诊断与控制提供路径。"], ["Maps the threats facing trustworthy LLM agents and organizes practical countermeasures across data, training, deployment, interaction, and governance.", "系统梳理可信 LLM 智能体面临的威胁，并从数据、训练、部署、交互和治理等环节整理应对措施。"], ["Studies how communication topology shapes safety and attack propagation in multi-agent systems, exposing risks that behavior-only evaluations miss.", "研究通信拓扑如何影响多智能体系统的安全与攻击传播，揭示仅靠行为评测难以发现的风险。"], ["Aggregates known backdoors into a unified collapse strategy that suppresses unknown threats while retaining the language model’s useful capabilities.", "将已知后门聚合为统一的坍缩策略，在保留模型有用能力的同时抑制未知威胁。"], ["Discovers latent acoustic triggers that implant and expose backdoors in audio-LLM alignment, connecting hidden signals to measurable safety failures.", "发现可在音频 LLM 对齐中植入并暴露后门的潜在声学触发器，将隐藏信号与可测量的安全失效联系起来。"], ["Uses topology-aware diagnosis and treatment to detect security weaknesses in LLM-based multi-agent systems and reduce risks through structural interventions.", "通过拓扑感知的诊断与治理发现 LLM 多智能体系统的安全弱点，并以结构化干预降低风险。"], ["Builds hierarchical memory graphs to trace how queries, insights, and interactions flow through multi-agent systems over time.", "构建层次化记忆图，追踪查询、洞见和交互信息在多智能体系统中的时序流动。"], ["Learns adaptive communication topologies with graph neural networks, helping multi-agent systems coordinate more efficiently under changing tasks and constraints.", "利用图神经网络学习自适应通信拓扑，帮助多智能体系统在任务和约束变化时更高效地协作。"], ["Decomposes competing objectives into orthogonal subspaces so alignment can improve multiple goals while reducing destructive interference between updates.", "将相互竞争的目标分解到正交子空间，使对齐同时优化多项目标并减少更新间的破坏性干扰。"], ["Shows that multi-agent systems can reason more reliably by asking targeted questions before acting, reducing avoidable errors and coordination failures.", "表明多智能体系统在行动前提出针对性问题可以提升推理可靠性，减少可避免的错误与协作失效。"]]);
+          addAll("#publications .paper-link", Array.from({ length: 11 }, () => ["Paper", "论文"]));
+          add(".all-publications", "", `See the complete and up-to-date publication list on <a href="https://scholar.google.com/citations?user=ajhKD2MAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>.`, "html");
+          add(".site-footer .footer-inner p:last-child", "Last updated October 2026", "最后更新：2026年10月");
+
+          const applyLanguage = (language) => {
+            entries.forEach(({ selector, en, zh, mode, index }) => {
+              const element = document.querySelectorAll(selector)[index];
+              if (!element) return;
+              const value = language === "zh" ? zh : en;
+              if (!value) return;
+              if (mode === "html") element.innerHTML = value;
+              else element.textContent = value;
+            });
+            document.querySelectorAll(".highlight-tag, .contributor-tag, .citation-tag").forEach((tag) => {
+              const text = tag.textContent.trim();
+              if (language === "zh") {
+                if (text === "Co-first author") tag.textContent = "共同一作";
+                else if (text === "Contributor") tag.textContent = "参与作者";
+                else if (text.includes("citations")) tag.textContent = text.replace("citations", "引用");
+              } else {
+                if (text === "共同一作") tag.textContent = "Co-first author";
+                else if (text === "参与作者") tag.textContent = "Contributor";
+                else if (text.includes("引用")) tag.textContent = text.replace("引用", "citations");
+              }
+            });
+            toggle.textContent = language === "zh" ? "EN" : "中";
+            toggle.setAttribute("aria-pressed", language === "zh");
+            toggle.setAttribute("aria-label", language === "zh" ? "Switch to English" : "Switch to Chinese");
+            document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+          };
+
+          let language = "en";
+          applyLanguage(language);
+          toggle.addEventListener("click", () => {
+            language = language === "en" ? "zh" : "en";
+            applyLanguage(language);
+          });
+        });
       })();
     </script>
 

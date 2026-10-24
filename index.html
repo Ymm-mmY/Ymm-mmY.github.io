@@ -394,7 +394,7 @@
           .filter(Boolean);
         const revealTargets = [
           document.querySelector(".profile"),
-          ...document.querySelectorAll(".content-section"),
+          ...document.querySelectorAll(".content-section > .section-title, .education-only, .internship-list"),
           ...document.querySelectorAll(".publication, .research-item")
         ].filter(Boolean);
 
@@ -407,7 +407,7 @@
               revealObserver.unobserve(entry.target);
             }
           }),
-          { threshold: 0.08, rootMargin: "0px 0px -8%" }
+          { threshold: 0.01, rootMargin: "0px 0px -2%" }
         );
         revealTargets.forEach((element) => revealObserver.observe(element));
 

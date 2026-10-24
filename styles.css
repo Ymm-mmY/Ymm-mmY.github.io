@@ -1009,6 +1009,13 @@ h1 {
   animation: none !important;
 }
 
+.js .publication.reveal-target,
+.js .research-item.reveal-target {
+  opacity: 1;
+  transform: none;
+  transition: background 240ms ease, transform 240ms ease, border-color 240ms ease;
+}
+
 .js .publication:nth-child(2),
 .js .research-item:nth-child(2) { transition-delay: 80ms; }
 .js .publication:nth-child(3) { transition-delay: 140ms; }

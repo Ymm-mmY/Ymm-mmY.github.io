@@ -149,7 +149,7 @@ nav a:focus-visible::after {
 
 .profile {
   display: grid;
-  grid-template-columns: 138px minmax(0, 1fr);
+  grid-template-columns: 150px minmax(0, 1fr);
   gap: 3.25rem;
   align-items: start;
   padding-bottom: 4rem;
@@ -157,8 +157,8 @@ nav a:focus-visible::after {
 
 .portrait-column img {
   display: block;
-  width: 138px;
-  height: 138px;
+  width: 150px;
+  height: 150px;
   border: 1px solid var(--line);
   object-fit: cover;
   object-position: center center;
@@ -351,7 +351,7 @@ h1 {
 
 .publication {
   display: grid;
-  grid-template-columns: 150px 74px minmax(0, 1fr);
+  grid-template-columns: 170px 74px minmax(0, 1fr);
   gap: 1.1rem;
   align-items: start;
   padding-block: 1.5rem;
@@ -377,7 +377,7 @@ h1 {
 }
 
 .paper-figure {
-  width: 150px;
+  width: 170px;
   margin: 0;
   overflow: hidden;
   border-radius: 2px;
@@ -543,11 +543,15 @@ h1 {
 
 .research-item {
   display: grid;
-  grid-template-columns: 150px 74px minmax(0, 1fr);
+  grid-template-columns: 170px 74px minmax(0, 1fr);
   gap: 1.1rem;
   align-items: start;
   padding-block: 1.5rem;
   border-bottom: 1px solid var(--line);
+}
+
+.recent-research .research-item:last-child {
+  border-bottom: 0;
 }
 
 .paper-placeholder {

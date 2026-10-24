@@ -450,6 +450,14 @@ h1 {
   color: #4d575b;
   font-size: 0.86rem;
   line-height: 1.5;
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.author-name {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .authors b {

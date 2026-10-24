@@ -541,6 +541,14 @@ h1 {
   margin-top: -1.1rem;
 }
 
+.recent-research {
+  padding-bottom: 2.25rem;
+}
+
+.recent-research + .publications {
+  padding-top: 2.25rem;
+}
+
 .research-item {
   display: grid;
   grid-template-columns: 185px 74px minmax(0, 1fr);

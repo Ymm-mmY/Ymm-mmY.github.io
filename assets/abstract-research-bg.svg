@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" fill="none">
+  <defs>
+    <linearGradient id="flow" x1="80" y1="90" x2="820" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#205D72" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#AD2632" stop-opacity=".08"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <path d="M72 518C170 430 165 282 276 234C376 191 445 270 510 194C581 111 680 104 832 48" stroke="url(#flow)" stroke-width="2"/>
+  <path d="M36 390C170 355 197 458 313 416C410 381 409 286 512 294C634 304 654 414 864 374" stroke="#205D72" stroke-opacity=".1" stroke-width="1.5" stroke-dasharray="5 9"/>
+  <path d="M146 91L276 234L510 194L640 330L832 48M276 234L313 416L640 330L864 374" stroke="#205D72" stroke-opacity=".09" stroke-width="1"/>
+  <g fill="#205D72" fill-opacity=".22">
+    <circle cx="72" cy="518" r="5"/><circle cx="276" cy="234" r="6"/><circle cx="510" cy="194" r="5"/>
+    <circle cx="640" cy="330" r="4"/><circle cx="832" cy="48" r="6"/><circle cx="313" cy="416" r="4"/>
+  </g>
+  <g fill="#AD2632" fill-opacity=".14">
+    <circle cx="146" cy="91" r="10"/><circle cx="864" cy="374" r="8"/><circle cx="512" cy="294" r="7"/>
+  </g>
+  <g stroke="#205D72" stroke-opacity=".08" stroke-width="1">
+    <rect x="94" y="132" width="74" height="44" rx="8"/><rect x="687" y="202" width="92" height="52" rx="8"/>
+    <path d="M168 154h38M687 228h-42M555 494h74M226 528h-70"/>
+  </g>
+  <g fill="#205D72" fill-opacity=".07" filter="url(#soft)">
+    <circle cx="276" cy="234" r="28"/><circle cx="640" cy="330" r="24"/>
+  </g>
+</svg>

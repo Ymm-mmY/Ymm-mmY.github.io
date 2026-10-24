@@ -408,7 +408,9 @@
           const target = document.querySelector(link.getAttribute("href"));
           if (!target) return;
           event.preventDefault();
-          const top = target.getBoundingClientRect().top + window.scrollY - header.getBoundingClientRect().height;
+          const top = link.getAttribute("href") === "#about"
+            ? 0
+            : target.getBoundingClientRect().top + window.scrollY - header.getBoundingClientRect().height;
           window.scrollTo({
             top,
             behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"

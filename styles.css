@@ -202,6 +202,34 @@ nav a.is-active::after {
   transform: translateY(-3px) rotate(-1deg);
 }
 
+.portrait-identity {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portrait-name {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.portrait-chinese {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
 .profile-links {
   display: grid;
   gap: 0.25rem;
@@ -264,6 +292,8 @@ h1 {
 
 .profile-copy h1 {
   margin-bottom: 1.15rem;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
 }
 
 .chinese-name {
@@ -1104,6 +1134,10 @@ h1 {
     gap: 1.25rem;
   }
 
+  .portrait-identity {
+    align-items: center;
+  }
+
   .portrait-column img {
     width: 96px;
     height: 96px;
@@ -1119,7 +1153,7 @@ h1 {
   }
 
   .profile-copy h1 {
-    font-size: 2.45rem;
+    font-size: 1.8rem;
   }
 
   .profile-copy > p:not(.scholar-stats),

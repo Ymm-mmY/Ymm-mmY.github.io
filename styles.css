@@ -693,7 +693,7 @@ h1 {
   gap: 0.55rem;
 }
 
-.timeline .institution-row > span:last-child {
+.timeline .institution-row > span {
   margin-top: 0;
   font-size: inherit;
 }
@@ -704,12 +704,12 @@ h1 {
   gap: 0.42rem;
 }
 
-.education-only .institution-row .institution-icon {
+.education-only .institution-row .institution-logo {
   order: 2;
-  width: 4.6rem;
-  height: 2.35rem;
+  width: 6.3rem;
+  height: 3rem;
   border-radius: 0.45rem;
-  font-size: 0.68rem !important;
+  padding: 0.38rem;
 }
 
 .internship-list .institution-row {
@@ -717,64 +717,56 @@ h1 {
   gap: 1rem;
 }
 
-.internship-list .institution-row > span:last-child {
+.internship-list .institution-row > span {
   flex: 1 1 auto;
   min-width: 0;
 }
 
-.internship-list .institution-row .institution-icon {
+.internship-list .institution-row .institution-logo {
   order: 2;
 }
 
-.institution-icon {
-  display: inline-grid;
+.institution-logo {
+  display: block;
   flex: 0 0 auto;
-  place-items: center;
-  width: 1.8rem;
+  width: 3rem;
   height: 1.8rem;
   margin-top: 0;
-  border: 1px solid currentColor;
+  padding: 0.25rem;
+  border: 1px solid var(--line);
   border-radius: 0.35rem;
-  font-family: var(--sans);
-  font-size: 0.5rem !important;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1;
+  background: #fff;
+  object-fit: contain;
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.institution-row:hover .institution-icon {
+.institution-row:hover .institution-logo {
   box-shadow: 0 4px 10px rgba(32, 93, 114, 0.12);
-  transform: translateY(-2px) rotate(-4deg);
+  transform: translateY(-2px);
 }
 
-.institution-icon-hku {
-  color: #8c1d40;
-  background: #f8e9ee;
+.institution-logo-hku {
+  border-color: #d7a8b8;
 }
 
-.institution-icon-ustc {
-  color: #a43b2a;
-  background: #faece7;
+.institution-logo-ustc {
+  border-color: #d9aaa0;
 }
 
-.institution-icon-tencent {
-  color: #1b5e9b;
-  background: #e8f1fb;
-  border-radius: 50%;
-  font-size: 0.9rem !important;
+.institution-logo-tencent {
+  width: 3.4rem;
+  border-color: #a8c9e7;
 }
 
-.institution-icon-sail {
-  color: #216a62;
-  background: #e5f2ef;
+.institution-logo-sail {
+  width: 3.4rem;
+  border-color: #216a62;
+  background: #216a62;
 }
 
-.institution-icon-astar {
-  color: #6a4a8c;
-  background: #f0eaf7;
-  border-radius: 50%;
-  font-size: 0.66rem !important;
+.institution-logo-astar {
+  width: 3.4rem;
+  border-color: #c7b5da;
 }
 
 .timeline small {

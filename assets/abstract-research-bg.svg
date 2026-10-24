@@ -8,6 +8,7 @@
       <feGaussianBlur stdDeviation="7"/>
     </filter>
   </defs>
+  <g opacity=".58">
   <path d="M72 518C170 430 165 282 276 234C376 191 445 270 510 194C581 111 680 104 832 48" stroke="url(#flow)" stroke-width="2"/>
   <path d="M36 390C170 355 197 458 313 416C410 381 409 286 512 294C634 304 654 414 864 374" stroke="#205D72" stroke-opacity=".1" stroke-width="1.5" stroke-dasharray="5 9"/>
   <path d="M146 91L276 234L510 194L640 330L832 48M276 234L313 416L640 330L864 374" stroke="#205D72" stroke-opacity=".09" stroke-width="1"/>
@@ -24,5 +25,6 @@
   </g>
   <g fill="#205D72" fill-opacity=".07" filter="url(#soft)">
     <circle cx="276" cy="234" r="28"/><circle cx="640" cy="330" r="24"/>
+  </g>
   </g>
 </svg>

@@ -27,7 +27,8 @@ body {
   margin: 0;
   color: var(--text);
   background:
-    url("assets/abstract-research-bg.svg") top right / min(68vw, 900px) auto no-repeat,
+    url("assets/abstract-research-bg.svg") top right / min(78vw, 1050px) auto no-repeat,
+    url("assets/abstract-research-bg.svg") bottom left / min(58vw, 780px) auto no-repeat,
     radial-gradient(circle at 12% 8%, rgba(228, 239, 242, 0.42), transparent 24rem),
     var(--background);
   background-attachment: fixed;

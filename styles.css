@@ -698,6 +698,34 @@ h1 {
   font-size: inherit;
 }
 
+.education-only .institution-row {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.education-only .institution-row .institution-icon {
+  order: 2;
+  width: 4.6rem;
+  height: 2.35rem;
+  border-radius: 0.45rem;
+  font-size: 0.68rem !important;
+}
+
+.internship-list .institution-row {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.internship-list .institution-row > span:last-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.internship-list .institution-row .institution-icon {
+  order: 2;
+}
+
 .institution-icon {
   display: inline-grid;
   flex: 0 0 auto;

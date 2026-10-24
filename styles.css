@@ -725,6 +725,11 @@ h1 {
   padding: 0.38rem;
 }
 
+.education-only .timeline li > .institution-logo-ustc {
+  width: min(12.5rem, 100%);
+  height: 2.7rem;
+}
+
 .internship-list .institution-row {
   justify-content: space-between;
   gap: 1rem;

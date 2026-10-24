@@ -454,7 +454,7 @@ h1 {
 .paper-summary {
   margin: 0.42rem 0 0;
   color: #3f6872;
-  max-width: 44ch;
+  max-width: none;
   min-height: 2.9em;
   font-size: 0.72rem;
   line-height: 1.45;

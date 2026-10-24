@@ -625,29 +625,6 @@ h1 {
   padding-block: 1.25rem;
 }
 
-.publication:not(.compact-publication) {
-  padding-block: 1.65rem;
-}
-
-.publication-divider {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin: 0.35rem 0;
-  color: var(--muted);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.publication-divider::before,
-.publication-divider::after {
-  height: 1px;
-  flex: 1;
-  content: "";
-  background: var(--line);
-}
-
 .all-publications {
   margin: 1.4rem 0 0;
   color: var(--muted);

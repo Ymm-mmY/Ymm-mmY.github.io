@@ -427,6 +427,12 @@ h1 {
   font-size: 1.03rem;
   font-weight: 600;
   line-height: 1.38;
+  text-wrap: wrap;
+  hyphens: auto;
+  hyphenate-character: "-";
+  hyphenate-limit-chars: 6 3 3;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .pub-details h3 a {

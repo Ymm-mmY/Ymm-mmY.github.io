@@ -451,6 +451,13 @@ h1 {
   font-weight: 600;
 }
 
+.paper-summary {
+  margin: 0.42rem 0 0;
+  color: #5a666a;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
 .pub-note {
   display: inline-flex;
   flex-wrap: wrap;
